@@ -14,6 +14,7 @@
   font-size: 22px;
   padding: 10px;
   display: flex;
+  font-variant: small-caps;
 }
 
 .addHero {
@@ -39,4 +40,19 @@
   color: white;
   background-color: #2F3129;
   box-shadow: #111111 0px 1px 2px;
+}
+
+.item {
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #2F3129;
+  box-shadow: #111111 1px 2px 3px;
+}
+
+.item .extra {
+  display: flex;
+}
+
+.filler {
+  width: 1em;
 }
