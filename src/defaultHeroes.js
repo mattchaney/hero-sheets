@@ -2,6 +2,19 @@
 const defaultHeroes = [
   {
     name: "Rygan",
+    attributes: {
+      Strength: 18,
+      Dexterity: 14,
+      Constitution: 18,
+      Intelligence: 8,
+      Wisdom: 10,
+      Charisma: 8
+    },
+    skills: {
+      Athletics: 4,
+      Acrobatics: 2,
+      Stealth: 0,
+    },
     characterClass: "Barbarian",
     level: 5,
     inventory: [
@@ -21,6 +34,27 @@ const defaultHeroes = [
     name: "Diman",
     characterClass: "Wizard",
     level: 5,
+    attributes: {
+      Strength: 10,
+      Dexterity: 14,
+      Constitution: 14,
+      Intelligence: 18,
+      Wisdom: 12,
+      Charisma: 10
+    },
+    skills: {
+      Athletics: 0,
+      Acrobatics: 2,
+      Stealth: 0,
+      Arcana: 10,
+      History: 10,
+    },
+    languages: [
+      "Elvish",
+      "Gnomish",
+      "Abyssal",
+      "Celestial"
+    ],
     inventory: [
       {
         name: "Wizard's Spellbook",
@@ -57,6 +91,16 @@ const defaultHeroes = [
           damageDice: "1d6",
           attackAttribute: "dex"
         }
+      },
+      {
+        name: "Light Crossbow",
+        count: 1,
+        weight: 5,
+        weightUnit: "lb",
+        extra: {
+          damageDice: "1d6",
+          attackAttribute: "dex"
+        }
       }
     ]
   },
@@ -81,8 +125,27 @@ const defaultHeroes = [
   },
   {
     name: "Rickety Crickets",
-    characterClass: "Hobo",
+    characterClass: "Street Urchin",
     level: 3,
+    attributes: {
+      Strength: 18,
+      Dexterity: 14,
+      Constitution: 18,
+      Intelligence: 8,
+      Wisdom: 10,
+      Charisma: 8
+    },
+    skills: {
+      Athletics: 4,
+      Acrobatics: 2,
+      Stealth: 0,
+    },
+    inventory: [
+
+    ],
+    languages: [
+      "Hood Rat"
+    ]
   }
 ];
 

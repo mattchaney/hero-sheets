@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
-import './App.css';
-
 import HeroList from './HeroList';
 import Hero from './Hero';
-
 import defaultHeroes from './defaultHeroes';
 
 const App = () => {
@@ -12,13 +9,13 @@ const App = () => {
 
   return (
     <div className="root">
-      <HeroList 
+      <HeroList
         heroes={heroes}
         currentHero={currentHero}
         setCurrentHero={setCurrentHero}
       />
       <div className="root">
-      {currentHero && 
+      {currentHero &&
         <Hero
           hero={currentHero}
           setCurrentHero={setCurrentHero}/>}

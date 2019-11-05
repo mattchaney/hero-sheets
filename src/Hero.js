@@ -3,27 +3,54 @@ import './Hero.css';
 
 const Hero = ({hero}) => {
   return (
-    <div className="heroCard">
-      <HeroStatus hero={hero} />
+    <div className="hero">
+      <Status hero={hero} />
+      <Map title="Attributes" items={hero.attributes} />
+      <Map title="Skills" items={hero.skills} />
+      <List title="Languages" items={hero.languages} />
       <Inventory inventory={hero.inventory} />
     </div>
   )
 }
 
-const HeroStatus = ({hero}) => {
+const Status = ({hero}) => {
   return (
-    <div>
+    <div className="heroBlock">
       <h2>Status</h2><hr />
       {hero.name}, Level {hero.level} {hero.characterClass}
     </div>
   );
 }
 
+const Map = ({title, items}) => {
+  return (
+    <div className="heroBlock">
+      <h2>{title}</h2><hr/>
+      {items && Object.keys(items).map((item) => {
+        return <div key={item}><em>{item}</em>: {items[item]}</div>;
+      })}
+    </div>
+  );
+}
+
+const List = ({title, items}) => {
+  return (
+    <div className="heroBlock">
+      <h2>{title}</h2><hr/>
+      {items && items.map((item) => {
+        return <div key={item}>{item}</div>;
+      })}
+    </div>
+  );
+}
+
 const Inventory = ({inventory}) => {
   return (
-    <div>
-      <h2>Inventory</h2><hr />
-      {inventory && inventory.map((item) => <Item item={item}/>)}
+    <div className="heroBlock">
+      <h2>Inventory</h2><hr/>
+      {inventory && inventory.map((item) => {
+        return <Item key={item.name} item={item}/>;
+      })}
     </div>
   );
 }
@@ -31,11 +58,11 @@ const Inventory = ({inventory}) => {
 const Item = ({item}) => {
   return (
     <div className="item">
-      {item.count}x {item.name} {item.weight*item.count}{item.weightUnit}
+      {item.count}x <strong>{item.name}</strong> {item.weight*item.count}{item.weightUnit}
       {item.extra && 
         Object.keys(item.extra).map((key) => {
           return (
-            <div className="extra">
+            <div key={key} className="extra">
               <span className="filler"/>{key}: {item.extra[key]}
             </div>
           );
