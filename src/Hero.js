@@ -5,9 +5,9 @@ const Hero = ({hero}) => {
   return (
     <div className="hero">
       <Status hero={hero} />
-      <Map title="Attributes" items={hero.attributes} />
-      <Map title="Skills" items={hero.skills} />
-      <List title="Languages" items={hero.languages} />
+      <HeroMap title="Attributes" items={hero.attributes} />
+      <HeroMap title="Skills" items={hero.skills} />
+      <HeroList title="Languages" items={hero.languages} />
       <Inventory inventory={hero.inventory} />
     </div>
   )
@@ -22,7 +22,7 @@ const Status = ({hero}) => {
   );
 }
 
-const Map = ({title, items}) => {
+const HeroMap = ({title, items}) => {
   return (
     <div className="heroBlock">
       <h2>{title}</h2><hr/>
@@ -33,7 +33,7 @@ const Map = ({title, items}) => {
   );
 }
 
-const List = ({title, items}) => {
+const HeroList = ({title, items}) => {
   return (
     <div className="heroBlock">
       <h2>{title}</h2><hr/>
