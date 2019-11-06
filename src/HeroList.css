@@ -1,36 +1,35 @@
 .heroList {
-    height: 100%;
-    width: 200px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
-    color: white;
-    background-color: #2F3129;
-  }
-  
-  .sidebarHeader {
-    font-size: 22px;
-    padding: 10px;
-    display: flex;
-    font-variant: small-caps;
-  }
-  
-  .addHero {
-    cursor: pointer;
-  }
-  
-  .heroSummary {
-    padding: 10px;
-    margin: 10px;
-    box-shadow: #111111 0px 1px 2px;
-    background-color: #272822;
-    cursor: pointer;
-  }
-  
-  .heroSummary:hover {
-    background-color: #343532;
-    box-shadow: rgba(0,0,0,0.25) 0px 2px 3px;
-  }
-  
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  background-color: #2F3129;
+  box-shadow: #111111 1px 1px 5px;
+}
+
+.sidebarHeader {
+  display: flex; /* keep text and svg on same line */
+  padding: 10px;
+  font-size: 22px;
+  font-variant: small-caps;
+}
+
+.addHero {
+  cursor: pointer;
+}
+
+.heroSummary {
+  margin: 10px;
+  border: 1px solid rgb(102, 102, 102);
+  padding: 10px;
+  box-shadow: #111111 1px 1px 5px;
+  background-color: #272822;
+  cursor: pointer;
+}
+
+.heroSummary:hover {
+  background-color: #343532;
+}

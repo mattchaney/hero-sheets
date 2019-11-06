@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import HeroList from './HeroList';
-import Hero from './Hero';
+import HeroSheet from './HeroSheet';
+import './App.css';
+
 import defaultHeroes from './defaultHeroes';
 
 const App = () => {
@@ -14,12 +16,10 @@ const App = () => {
         currentHero={currentHero}
         setCurrentHero={setCurrentHero}
       />
-      <div className="root">
       {currentHero &&
-        <Hero
+        <HeroSheet
           hero={currentHero}
           setCurrentHero={setCurrentHero}/>}
-      </div>
     </div>
   );
 }

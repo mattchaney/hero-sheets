@@ -1,0 +1,32 @@
+.heroSheet {
+  margin-left: 200px;
+  padding: 10px;
+  background-color: transparent;
+}
+
+.item {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.item .extra {
+  display: flex;
+}
+
+.heroBlock {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(95, 95, 95);
+  padding: 5px;
+  box-shadow: #111111 1px 1px 5px;
+  background-color: #2F3129;
+}
+
+.heroBlock h3, hr {
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.filler {
+  width: 1em; /* inventory extra attributes indent */
+}

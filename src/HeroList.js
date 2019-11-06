@@ -6,7 +6,7 @@ const HeroList = ({heroes, setCurrentHero}) => {
   return (
      <div className="heroList">
       <div className="sidebarHeader">
-        <span>HEROES</span>
+        <span>heroes</span>
         <span className="addHero">
           <AddBox/>
         </span>

@@ -2,6 +2,8 @@
 const defaultHeroes = [
   {
     name: "Rygan",
+    level: 5,
+    characterClass: "Barbarian",
     attributes: {
       Strength: 18,
       Dexterity: 14,
@@ -15,8 +17,6 @@ const defaultHeroes = [
       Acrobatics: 2,
       Stealth: 0,
     },
-    characterClass: "Barbarian",
-    level: 5,
     inventory: [
       {
         name: "Greataxe",
@@ -32,10 +32,10 @@ const defaultHeroes = [
   },
   {
     name: "Diman",
-    characterClass: "Wizard",
     level: 5,
+    characterClass: "Wizard",
     attributes: {
-      Strength: 10,
+      Strength: 8,
       Dexterity: 14,
       Constitution: 14,
       Intelligence: 18,
@@ -106,8 +106,23 @@ const defaultHeroes = [
   },
   {
     name: "Jebth",
-    characterClass: "Monk",
     level: 5,
+    characterClass: "Monk",
+    attributes: {
+      Strength: 13,
+      Dexterity: 18,
+      Constitution: 14,
+      Intelligence: 12,
+      Wisdom: 10,
+      Charisma: 8
+    },
+    skills: {
+      Athletics: 0,
+      Acrobatics: 2,
+      Stealth: 0,
+      Arcana: 10,
+      History: 10,
+    },
     inventory: [
       {
         name: "+1 Magic Dagger of Frost",
@@ -125,8 +140,8 @@ const defaultHeroes = [
   },
   {
     name: "Rickety Crickets",
-    characterClass: "Street Urchin",
     level: 3,
+    characterClass: "Street Urchin",
     attributes: {
       Strength: 18,
       Dexterity: 14,
@@ -146,6 +161,24 @@ const defaultHeroes = [
     languages: [
       "Hood Rat"
     ]
+  },
+  {
+    name: "Andy Wraithling",
+    level: 4,
+    characterClass: "Scope Creep",
+    attributes: {
+      Strength: 8,
+      Dexterity: 8,
+      Constitution: 8,
+      Intelligence: 18,
+      Wisdom: 12,
+      Charisma: 6
+    },
+    skills: {
+      Athletics: 4,
+      Acrobatics: 2,
+      Stealth: 0,
+    },
   }
 ];
 

@@ -1,13 +1,13 @@
 import React from 'react';
-import './Hero.css';
+import './HeroSheet.css';
 
-const Hero = ({hero}) => {
+const HeroSheet = ({hero}) => {
   return (
-    <div className="hero">
+    <div className="heroSheet">
       <Status hero={hero} />
-      <HeroMap title="Attributes" items={hero.attributes} />
-      <HeroMap title="Skills" items={hero.skills} />
-      <HeroList title="Languages" items={hero.languages} />
+      <HeroMapBox title="Attributes" items={hero.attributes} />
+      <HeroMapBox title="Skills" items={hero.skills} />
+      <HeroListBox title="Languages" items={hero.languages} />
       <Inventory inventory={hero.inventory} />
     </div>
   )
@@ -16,16 +16,16 @@ const Hero = ({hero}) => {
 const Status = ({hero}) => {
   return (
     <div className="heroBlock">
-      <h2>Status</h2><hr />
+      <h3>Status</h3><hr />
       {hero.name}, Level {hero.level} {hero.characterClass}
     </div>
   );
 }
 
-const HeroMap = ({title, items}) => {
+const HeroMapBox = ({title, items}) => {
   return (
     <div className="heroBlock">
-      <h2>{title}</h2><hr/>
+      <h3>{title}</h3><hr/>
       {items && Object.keys(items).map((item) => {
         return <div key={item}><em>{item}</em>: {items[item]}</div>;
       })}
@@ -33,10 +33,10 @@ const HeroMap = ({title, items}) => {
   );
 }
 
-const HeroList = ({title, items}) => {
+const HeroListBox = ({title, items}) => {
   return (
     <div className="heroBlock">
-      <h2>{title}</h2><hr/>
+      <h3>{title}</h3><hr/>
       {items && items.map((item) => {
         return <div key={item}>{item}</div>;
       })}
@@ -47,7 +47,7 @@ const HeroList = ({title, items}) => {
 const Inventory = ({inventory}) => {
   return (
     <div className="heroBlock">
-      <h2>Inventory</h2><hr/>
+      <h3>Inventory</h3><hr/>
       {inventory && inventory.map((item) => {
         return <Item key={item.name} item={item}/>;
       })}
@@ -71,4 +71,4 @@ const Item = ({item}) => {
   );
 }
 
-export default Hero;
+export default HeroSheet;
